@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "NoSQL & MongoDB"
+        "NoSQL & MongoDB",
+        "query_operators"
     ]
 }

@@ -153,19 +153,46 @@ db.products.updateMany(
 
 db.products.updateMany(
     {
-        category: "Electronics"
     },
     {
-        $set: { stock: 5 }
+        $set: { price: 130 }
+    }
+);
+
+db.products.updateMany(
+    {
+        category: "Sportswear"
+    },
+    {
+        $inc: { stock: -5 }
     }
 );
 
 // 6. ** Suppression :**
 
-db.products.deleteMany(
+// db.products.deleteMany(
+//     {
+//         discount: { $lt: 0.15 }
+//     }
+// );
+
+
+db.products.updateMany(
     {
-        discount: { $lt: 0.15 }
+        category: "Sportswear"
+    },
+    {
+        $inc: { stock: -5 }
     }
 );
 
-db.products.find();
+
+db.products.updateMany(
+    {
+    },
+    {
+        $set: { stock: 130 }
+    }
+);
+
+db.products.find()

@@ -23,3 +23,27 @@ Remplacer un document entier par un nouveau.
 ```js
 db.users.replaceOne({name: "John"}, {firstName: "Jonathan", age: 40});
 ```
+
+## Opérateurs de mise à jour
+
+`$set` : Met à jour ou ajouter un champ
+
+`$inc` : Incrémente ou décrémente la valeur d'un **champ numérique**
+
+```js
+db.users.updateMany({views: {$exists: true}}, {$inc: {views: 1 }})
+```
+
+`$unset` : Supprime un champ d'un document
+
+`$push`: Ajoute une valeur à un tableau
+
+```js
+db.users.updateOne({{name: "Bob"}, {$push: {tags: "new"}}})
+```
+
+`$pull`: Retire une valeur d'un tableau
+
+```js
+db.users.updateOne({{name: "Bob"}, {$pull: {tags: "old"}}})
+```

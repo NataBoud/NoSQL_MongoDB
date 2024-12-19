@@ -2,6 +2,8 @@
     "conventionalCommits.scopes": [
         "NoSQL & MongoDB",
         "query_operators",
-        "update"
+        "update",
+        "count",
+        "ajout de docs"
     ]
 }
